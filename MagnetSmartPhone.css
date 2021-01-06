@@ -1,0 +1,1012 @@
+@font-face{
+    font-family: century_gothic;
+    src: url(../fonts/GOTHIC.TTF);
+}
+@font-face{
+    font-family: candara;
+    src: url(../fonts/Candara.ttf);
+}
+@font-face{
+    font-family: advent;
+    src: url(../fonts/AdventPro-Thin.ttf);
+}
+body{
+    background-color: black;
+}
+.falseBody {
+    background-image: url(../images/manuel-will-gd3t5Dtbwkw-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: cover;
+    background-position: left 0% bottom 20%;
+    padding: 0px;
+}
+#header{
+        margin: none;
+        height: 22vw;
+        position: relative;
+        overflow: hidden;
+        color: white;
+    }
+
+#story {
+    font-family: candara;
+    font-size: 1.5vw;
+    letter-spacing: 0.5vw;
+    margin-top: 2vw;
+    margin-left: 39vw;
+  }
+  #mainHead {
+    margin-left: 39.5vw;
+    font-family: advent;
+    font-size: 7vw;
+    letter-spacing: 0.5vw;
+    margin-top: 0vw;
+    margin-bottom: 0px;
+    transition: margin-left 1s ease, letter-spacing 1s ease, font-size 1s ease,
+      margin-top 1s ease, transform 0.7s ease;
+  }
+  #subtitle {
+    margin-left: 40vw;
+    display: block;
+    font-family: candara;
+    font-size: 1vw;
+    letter-spacing: 0.3vw;
+    margin-top: 0vw;
+  }
+  #header:hover #mainHead {
+    font-size: 10vw;
+    margin-top: 2vw;
+    margin-left: 37vw;
+    letter-spacing: 2vw;
+    transform: translateX(-3.5vw);
+  }
+#moon{
+    height: 20vw;
+    width: 20vw;
+    position: absolute;
+    z-index: 2;
+    bottom: -20%;
+    right: 80%;
+    transition: transform 1s ease;
+}
+#header:hover #moon{
+    transform: translateX(80vw) translateY(-25vw) rotate(-60deg) scale(2) ;
+}
+
+#smartMenu{
+    position: relative;
+}
+#smallMenu{
+    font-family: century_gothic;
+    font-size: 18px;
+    color: white;
+    display: inline-block;
+    position: absolute;
+    top: -50%;
+    left: 0px;
+    width: 97.5%;
+    padding: 1vw;
+    text-align: center;
+    cursor: pointer;
+}
+#navBar ul{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    box-sizing: border-box;
+    top: 35px;
+    width: 100%;
+    list-style: none;
+    font-family: century_gothic;
+    margin: 0px;
+    padding: 0px;
+}
+#navBar a{
+    text-decoration: none;
+    color: white;
+}
+#navBar li{
+    background-color: black;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: 12px 15px;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.25s ease,font-size 0.5s ease;
+}
+#navBar{
+    background-color: rgba(0,0,0,1);
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+    padding: 0px;
+    height:35px;
+}
+#dropdownMenu img{
+    height: 15px;
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top: 35%;
+    margin-right: 5px;
+    transition: transform 0.25s ease;
+    z-index: 10;
+}
+#dropdownMenu:hover img{
+    transform: rotate(+90deg);
+}
+#navBar:hover ul{
+    visibility: visible;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.6);
+}
+#navBar li:hover{
+    background-color: grey;
+    font-size: 20px;
+}
+#dropdownMenu{
+    position: relative;
+    width: 100%;
+}
+#dropdownContent{
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    background-color: rgba(0,0,0,1);
+    width: 100%;
+    font-size: 16px;
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+#dropdownContent a{
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    transition: background-color 0.5s ease;
+}
+#dropdownContent a:hover{
+    background-color: #1a1a1a;
+}
+#dropdownMenu:hover #dropdownContent{
+    visibility: visible;
+    opacity: 1;
+}
+
+.center {
+    box-sizing: border-box;
+    padding: 0px 10px 10px 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .post {
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 0px;
+  }
+  .postTitle {
+    font-family: candara;
+    font-size: 30px;
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    padding: 5px;
+  }
+  .postDate {
+    font-family: candara;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px 5px;
+  }
+  .postAuthor {
+    font-family: candara;
+    font-size: 15px;
+    padding-left: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .postAuthor span {
+    font-weight: bold;
+  }
+  .postDesc {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: century_gothic;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .keepReading {
+    font-family: candara;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    padding-left: 5px;
+  }
+  .imgContainer {
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    position: relative;
+    height: 200%;
+    overflow: hidden;
+  }
+  .imgContainer img {
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0px;
+    transform: scale(1.1);
+    transition: transform 1s ease;
+    max-height: 400px;
+  }
+  .overlay {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(
+      +0deg,
+      rgba(49, 49, 49, 0.5),
+      rgba(255, 255, 255, 0)
+    );
+    transition: height 0.25s ease;
+    box-sizing: border-box;
+  }
+  .overlayMeta {
+    position: absolute;
+    bottom: 5%;
+    transform: translateX(-100vw);
+    transition: transform 1s ease;
+    transition-delay: -0.1s;
+  }
+  .overlayTitle {
+    font-family: candara;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin: 0px;
+    transition: font-size 0.5s ease;
+    border-left: 5px solid #0162d9;
+    padding-left: 10px;
+  }
+  .overlayTitle:hover {
+    font-size: 35px;
+  }
+  .overlayDate {
+    font-family: candara;
+    color: white;
+    font-size: 15px;
+    box-sizing: border-box;
+    margin: 0px;
+    transition: font-size 0.5s ease;
+  }
+  .overlayDate:hover {
+    font-size: 20px;
+  }
+  .overlayAuthor {
+    font-family: candara;
+    color: white;
+    font-size: 15px;
+    box-sizing: border-box;
+    margin: 0px;
+    transition: font-size 0.5s ease;
+  }
+  .overlayAuthor:hover {
+    font-size: 20px;
+  }
+  .overlayReadNow {
+    font-family: candara;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    box-sizing: border-box;
+    margin: 0px;
+    transition: font-size 0.5s ease;
+  }
+  .overlayReadNow:hover {
+    font-size: 25px;
+  }
+  .imgContainer:hover img {
+    transform: scale(1.3);
+  }
+  .imgContainer:hover .overlay {
+    height: 100%;
+  }
+  .imgContainer:hover .overlayMeta {
+    transform: translateX(10px);
+  }
+  #moonBlog {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0.5vw 1vw;
+    width: 35%;
+    height: 5vw;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 32%;
+    margin-top: 3vw;
+  }
+  #moonBlog #blogSky {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    bottom: -5vw;
+    left: 0px;
+    transform: scale(1.2);
+    transition: transform 0.75s ease;
+  }
+  #moonBlog a {
+    text-decoration: none;
+    font-family: advent;
+    font-size: 3vw;
+    color: white;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    z-index: 3;
+    font-weight: bold;
+    transition: font-size 1s ease;
+  }
+  #moonBlog:hover a {
+    font-size: 3.5vw;
+  }
+  #moonBlog:hover #blogSky {
+    transform: scale(1.5);
+  }
+  .leftContent {
+    border: 1px solid rgba(245, 120, 56, 0);
+    margin-top: 0px;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .ceoMessage {
+    font-family: century_gothic;
+    font-size: 25px;
+    padding: 10px;
+
+    height: 50vw;
+    color: white;
+    text-align: center;
+  }
+  .vid{
+      width: 100%;
+      height: 40vw;
+  }
+  .left .title {
+    font-family: century_gothic;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+  }
+  .left .shop{
+      padding: 0px 30%;
+  }
+  .left .shopListing {
+    width: 100%;
+    height: 60vw;
+    background-color: white;
+    overflow: auto;
+    padding-bottom: 20px;
+  }
+  .left .shopItem {
+    background-color: white;
+    padding: 0px;
+    margin-bottom: 10px;
+  }
+  .left .photo {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 0px;
+    overflow: hidden;
+  }
+  .left .shopItem img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+  }
+  .left .name {
+    margin: 0px;
+    font-family: century_gothic;
+    font-size: 18px;
+    padding: 5px;
+    transition: font-size 0.5s ease;
+  }
+  .left .owner {
+    margin: 0px;
+    font-family: century_gothic;
+    font-size: 14px;
+    padding-left: 5px;
+    transition: font-size 0.5s ease;
+  }
+  .left .price {
+    margin: 0px;
+    font-family: century_gothic;
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 5px;
+    transition: font-size 0.5s ease;
+  }
+  .left .name:hover {
+    font-size: 20px;
+  }
+  .left .owner:hover {
+    font-size: 16px;
+  }
+  .left .price:hover {
+    font-size: 18px;
+  }
+  .left .photo:hover img {
+    transform: scale(1.8);
+  }
+  .left .visitShop {
+    font-family: century_gothic;
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid black;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 0px;
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: color 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+  }
+  .left .visitShop:hover {
+    color: white;
+    background-color: black;
+    border: none;
+  }
+
+  .social {
+    padding: 0% 20%;
+  }
+  .socialTitle {
+    font-family: century_gothic;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+  }
+  .fb_text {
+    border-left: 5px solid rgba(1, 98, 217, 1);
+    background-color: rgba(255, 255, 255, 1);
+    position: relative;
+    margin-top: 0px;
+  }
+  #like {
+    color: rgba(1, 98, 217, 1);
+    font-size: 25px;
+    font-family: candara;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.25s ease;
+    padding: 5px 10px;
+  }
+  .fb_overlay {
+    background-color: rgba(1, 98, 217, 1);
+    width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 0px;
+    transition: width 0.25s ease;
+  }
+  .fb_overlay p {
+    padding: 5px 10px 20px 10px;
+    position: absolute;
+    color: white;
+    bottom: -100%;
+    font-size: 25px;
+    font-family: candara;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  .fb_text:hover .fb_overlay p {
+    opacity: 1;
+  }
+  .fb_text:hover p {
+    opacity: 0;
+  }
+  .fb_text:hover .fb_overlay {
+    width: 100%;
+  }
+  .fb_text img {
+    position: absolute;
+    z-index: 3;
+    width: 15%;
+    height: 65%;
+    right: 3.5%;
+    bottom: 20%;
+  }
+  .like2 {
+    opacity: 1;
+    transition: opacity 0.25s ease;
+  }
+  .like1 {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  .fb_text:hover .like1 {
+    opacity: 1;
+  }
+  .fb_text:hover .like2 {
+    opacity: 0;
+  }
+  .tw_text {
+    border-left: 5px solid rgba(0, 172, 283, 1);
+    background-color: rgba(255, 255, 255, 1);
+    position: relative;
+  }
+  #follow {
+    color: rgba(0, 172, 283, 1);
+    font-size: 25px;
+    font-family: candara;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.25s ease;
+    padding: 5px 10px;
+  }
+  .tw_overlay {
+    background-color: rgba(0, 172, 283, 1);
+    width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 0px;
+    transition: width 0.25s ease;
+  }
+  .tw_overlay p {
+    padding: 5px 10px 20px 10px;
+    position: absolute;
+    color: white;
+    bottom: -100%;
+    font-size: 25px;
+    font-family: candara;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  .tw_text:hover .tw_overlay p {
+    opacity: 1;
+  }
+  .tw_text:hover p {
+    opacity: 0;
+  }
+  .tw_text:hover .tw_overlay {
+    width: 100%;
+  }
+  .tw_text img {
+    position: absolute;
+    z-index: 3;
+    width: 15%;
+    height: 65%;
+    right: 3.5%;
+    bottom: 20%;
+  }
+  .follow2 {
+    opacity: 1;
+    transition: opacity 0.25s ease;
+  }
+  .follow1 {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  .tw_text:hover .follow1 {
+    opacity: 1;
+  }
+  .tw_text:hover .follow2 {
+    opacity: 0;
+  }
+  .yt_text {
+    border-left: 5px solid rgba(255, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 1);
+    position: relative;
+  }
+  #subscribe {
+    color: rgba(255, 0, 0, 1);
+    font-size: 25px;
+    font-family: candara;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.25s ease;
+    padding: 5px 10px;
+  }
+  .yt_overlay {
+    background-color: rgba(255, 0, 0, 1);
+    width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 0px;
+    transition: width 0.25s ease;
+  }
+  .yt_overlay p {
+    padding: 5px 10px 20px 10px;
+    position: absolute;
+    color: white;
+    bottom: -100%;
+    font-size: 25px;
+    font-family: candara;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  .yt_text:hover .yt_overlay p {
+    opacity: 1;
+  }
+  .yt_text:hover p {
+    opacity: 0;
+  }
+  .yt_text:hover .yt_overlay {
+    width: 100%;
+  }
+  .yt_text img {
+    position: absolute;
+    z-index: 3;
+    width: 15%;
+    height: 60%;
+    right: 3.5%;
+    bottom: 20%;
+    border-radius: 15px;
+  }
+  .subscribe2 {
+    opacity: 1;
+    transition: opacity 0.25s ease;
+  }
+  .subscribe1 {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  .yt_text:hover .subscribe1 {
+    opacity: 1;
+  }
+  .yt_text:hover .subscribe2 {
+    opacity: 0;
+  }
+
+  .right {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: block;
+  }
+.right .title{
+    margin-top: 0px;
+    font-family: century_gothic;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+.right .shopListing{
+    width: 100%;
+    background-color: white;
+    padding-bottom: 20px;
+}
+.right .shopItem {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0px;
+    margin-bottom: 10px;
+  }
+  .right .photo {
+    width: 100%;
+    height: fit-content;
+    max-height: 300px;
+    margin-bottom: 0px;
+    overflow: hidden;
+  }
+  .right .shopItem img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+  }
+  .right .photo:hover img {
+    transform: scale(1.25);
+  }
+  .right .visitEvents {
+    width: 60%;
+    font-family: century_gothic;
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(255, 255, 225, 0);
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid white;
+    text-align: center;
+    margin: 20px 20%;
+    display: block;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: color 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+  }
+  .right .visitEvents:hover {
+    color: black;
+    background-color: white;
+    border: none;
+  }
+  .right .name {
+    margin: 0px;
+    font-family: century_gothic;
+    font-size: 18px;
+    padding: 5px;
+    transition: font-size 0.5s ease;
+  }
+  .right .owner {
+    margin: 0px;
+    font-family: century_gothic;
+    font-size: 14px;
+    padding-left: 5px;
+    transition: font-size 0.5s ease;
+  }
+  .right .price {
+    margin: 0px;
+    font-family: century_gothic;
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 5px;
+    transition: font-size 0.5s ease;
+  }
+  .right .name:hover {
+    font-size: 20px;
+  }
+  .right .owner:hover {
+    font-size: 16px;
+  }
+  .right .price:hover {
+    font-size: 18px;
+  }
+  .contact .title{
+    font-family: century_gothic;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+  }
+  .contact p {
+    font-family: century_gothic;
+    font-size: 2.5vw;
+    color: white;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+  }
+  .contact label {
+    font-family: century_gothic;
+    font-size: 3vw;
+    color: white;
+    padding: 10px 5px;
+    margin-left: 3px;
+  }
+  .contact input {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 90%;
+    height: 3.5vw;
+    margin-left: 5px;
+    border: 1px solid black;
+    transition: width 0.5s ease;
+    margin-bottom: 10px;
+    margin-top: 3px;
+    height: 3vw;
+    transition: background-color 0.5s ease, width 0.5s ease, height 0.5s ease;
+  }
+  .contact input:focus {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 5px 10px;
+  }
+  .contact select {
+    border: 1px solid black;
+    margin-left: 5px;
+    width: 100%;
+    transition: background-color 0.5s ease, width 0.5s ease, height 0.5s ease;
+    margin-bottom: 10px;
+    margin-top: 3px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    font-family: century_gothic;
+    font-weight: bold;
+    font-size: 1.5vw;
+    border: 1px solid white;
+    height: 4vw;
+  }
+  .contact select:focus {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+  .contact textarea {
+    border: 1px solid black;
+    margin-left: 5px;
+    width: 90%;
+    transition: background-color 0.5s ease, width 0.5s ease, height 0.5s ease;
+    margin-bottom: 10px;
+    margin-top: 3px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    font-family: century_gothic;
+    font-weight: bold;
+    font-size: 1.5vw;
+    border: 1px solid white;
+    height: 7vw;
+  }
+  .contact textarea:focus {
+    width: 100%;
+    height: 9vw;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 5px 10ps;
+  }
+  #send {
+    width: 90%;
+    color: white;
+    background-color: rgba(245, 120, 56, 0);
+    padding: 5px;
+    font-family: century_gothic;
+    font-weight: bold;
+    font-size: 3vw;
+    border: 1px solid white;
+    height: 5.5vw;
+    margin-left: 7px;
+    cursor: pointer;
+  }
+  #send:hover {
+    color: black;
+    background-color: white;
+    border: none;
+  }
+  .form{
+    margin-left: 15%;
+    width: 70%;
+    margin-right: 15%;
+  }
+
+
+  .footer {
+    margin-top: 10px;
+    height: fit-content;
+    max-height: 47vw;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-count: 2;
+    padding-bottom: 20px;
+  }
+  
+  .footerLinks {
+    flex-basis: 35%;
+    z-index: 2;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+  .footerLinks a {
+    font-family: century_gothic;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block;
+    padding: 5px 10px;
+    position: relative;
+    transition: font-size 0.5s ease, border-bottom 0.5s ease;
+  }
+  .underline {
+    position: absolute;
+    bottom: 0px;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.5s ease;
+  }
+  .footerLinks a:hover {
+    font-size: 24px;
+  }
+  .link:hover .underline {
+    width: 70%;
+  }
+  .downloadApp {
+    position: relative;
+    z-index: 3;
+    box-sizing: border-box;
+    flex-basis: 65%;
+  }
+  .no1 {
+    font-family: candara;
+    font-size: 2.5vw;
+    letter-spacing: 1vw;
+    text-align: center;
+    color: white;
+    margin-bottom: 0px;
+  }
+  .no2 {
+    font-family: advent;
+    font-size: 5vw;
+    color: white;
+    text-align: center;
+    margin: 0px;
+    letter-spacing: 1vw;
+    transition: font-size, 0.5s ease, letter-spacing 0.5s ease;
+  }
+  .no3 {
+    font-family: candara;
+    font-size: 2.5vw;
+    letter-spacing: 0.5vw;
+    text-align: center;
+    color: white;
+    margin: 0px;
+  }
+  .no2:hover {
+    font-size: 6vw;
+    letter-spacing: 0.5vw;
+  }
+  .androidApp {
+    width: 40%;
+    box-sizing: border-box;
+    color: white;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    display: inline-block;
+    margin: 5% 5%;
+    position: absolute;
+    left: 0px;
+    padding: 10px 15px;
+    text-align: center;
+    font-family: century_gothic;
+    font-weight: bold;
+    font-size: 3vw;
+    transition: color 0.5s ease, background-color 0.5s ease;
+  }
+  .androidApp:hover {
+    color: black;
+    background-color: white;
+  }
+  .iosApp {
+    width: 40%;
+    box-sizing: border-box;
+    color: white;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    margin: 5% 5%;
+    padding: 10px 15px;
+    text-align: center;
+    font-family: century_gothic;
+    font-weight: bold;
+    font-size: 3vw;
+    transition: color 0.5s ease, background-color 0.5s ease;
+  }
+  .iosApp:hover {
+    color: black;
+    background-color: white;
+  }
