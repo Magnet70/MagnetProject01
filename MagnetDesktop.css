@@ -1,14 +1,14 @@
 @font-face {
   font-family: century_gothic;
-  src: url(../fonts/GOTHIC.TTF);
+  src: url(magnet70.github.io/GOTHIC.TTF);
 }
 @font-face {
   font-family: candara;
-  src: url(../fonts/fonts/Candara.ttf);
+  src: url(magnet70.github.io/Candara.ttf);
 }
 @font-face {
   font-family: advent;
-  src: url(magnet70.github.io/fonts/AdventPro-Thin.ttf);
+  src: url(magnet70.github.io/AdventPro-Thin.ttf);
 }
 body{
     background-color: black;
